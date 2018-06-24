@@ -3,6 +3,13 @@ import './App.css';
 import promotion from './promotion1.json';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: undefined
+    }
+  }
+
   render() {
     return (
       <div class="container">
@@ -23,10 +30,10 @@ class App extends Component {
               </thead>
               <tbody>
                 {
-                  promotion.map(function(promotion,index){
+                  promotion.map(function (promotion, index) {
                     return (
                       <tr>
-                        <th>{index+1}</th>
+                        <th>{index + 1}</th>
                         <td>{promotion.promotionId}</td>
                         <td>{promotion.phoneNumber}</td>
                         <td>{promotion.date}</td>
